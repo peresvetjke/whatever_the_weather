@@ -51,8 +51,10 @@ gem "bootsnap", require: false
 gem 'grape'
 gem 'grape-swagger'
 gem 'grape-swagger-ui'
+gem 'grape_on_rails_routes'
 gem 'trailblazer'
 gem 'trailblazer-rails'
+gem 'faraday'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -78,4 +80,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem 'shoulda-matchers', '~> 5.0'
 end

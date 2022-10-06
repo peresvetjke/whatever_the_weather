@@ -3,4 +3,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  # mount Weather::Base => '/'
+  mount Api::Base, at: "/"
 end
