@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://dataservice.accuweather.com/currentconditions/v1/171705?apikey=SA5lAHPDxgRTHoGxdUEA0vOx0SrGyEPu
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - dataservice.accuweather.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 06 Oct 2022 18:32:14 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '500'
+      Connection:
+      - keep-alive
+      Server:
+      - Microsoft-IIS/10.0
+      Ratelimit-Limit:
+      - '50'
+      Ratelimit-Remaining:
+      - '45'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE
+      Access-Control-Allow-Headers:
+      - origin, x-requested-with, accept
+      Access-Control-Max-Age:
+      - '3628800'
+      Vary:
+      - Accept-Encoding
+      Cache-Control:
+      - public, max-age=67
+      Expires:
+      - Thu, 06 Oct 2022 18:33:21 GMT
+      Akamai-Grn:
+      - 0.8e2a0660.1665081134.d82eb1b
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - deflate;q=0.6
+      - gzip;q=1.0
+      - identity;q=0.3
+      Host:
+      - api.accuweather.com
+      User-Agent:
+      - Ruby
+      X-Forwarded-For:
+      - 185.115.7.206
+      X-Forwarded-Port:
+      - '80'
+      X-Forwarded-Proto:
+      - http
+    body:
+      encoding: UTF-8
+      string: '[{"LocalObservationDateTime":"2022-10-06T22:13:00+04:00","EpochTime":1665079980,"WeatherText":"Mostly
+        cloudy","WeatherIcon":38,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":21.1,"Unit":"C","UnitType":17},"Imperial":{"Value":70.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us","Link":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us"}]'
+  recorded_at: Thu, 06 Oct 2022 18:32:14 GMT
+recorded_with: VCR 6.1.0

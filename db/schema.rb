@@ -16,7 +16,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_05_194029) do
 
   create_table "temperature_records", force: :cascade do |t|
     t.float "temperature_celsius"
-    t.datetime "local_observation_date_time"
+    t.datetime "date_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

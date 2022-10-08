@@ -1,4 +1,4 @@
-module API
+module Api
   module V1
     module Defaults
       extend ActiveSupport::Concern
@@ -8,8 +8,8 @@ module API
         version "v1", using: :path
         default_format :json
         format :json
-        formatter :json, 
-             Grape::Formatter::ActiveModelSerializers
+        # formatter :json, 
+        #      Grape::Formatter::ActiveModelSerializers
 
         helpers do
           def permitted_params

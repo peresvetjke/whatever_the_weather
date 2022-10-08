@@ -52,9 +52,11 @@ gem 'grape'
 gem 'grape-swagger'
 gem 'grape-swagger-ui'
 gem 'grape_on_rails_routes'
+gem 'grape-active_model_serializers'
 gem 'trailblazer'
 gem 'trailblazer-rails'
 gem 'faraday'
+gem 'rufus-scheduler'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -81,4 +83,7 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
   gem 'shoulda-matchers', '~> 5.0'
+  gem 'vcr'
+  gem 'webmock'
+  gem "timecop"
 end

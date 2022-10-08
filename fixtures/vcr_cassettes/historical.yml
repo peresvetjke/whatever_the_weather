@@ -1,0 +1,88 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://dataservice.accuweather.com/currentconditions/v1/171705/historical/24?apikey=SA5lAHPDxgRTHoGxdUEA0vOx0SrGyEPu
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 06 Oct 2022 18:40:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '11905'
+      Connection:
+      - keep-alive
+      Server:
+      - Microsoft-IIS/10.0
+      Ratelimit-Limit:
+      - '50'
+      Ratelimit-Remaining:
+      - '44'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, PUT, POST, DELETE
+      Access-Control-Allow-Headers:
+      - origin, x-requested-with, accept
+      Access-Control-Max-Age:
+      - '3628800'
+      Vary:
+      - Accept-Encoding
+      Cache-Control:
+      - public, max-age=566
+      Expires:
+      - Thu, 06 Oct 2022 18:50:11 GMT
+      Akamai-Grn:
+      - 0.59deda17.1665081645.17afc996
+      Accept:
+      - "*/*"
+      Accept-Encoding:
+      - deflate;q=0.6
+      - gzip;q=1.0
+      - identity;q=0.3
+      Host:
+      - api.accuweather.com
+      User-Agent:
+      - Faraday v2.6.0
+      X-Forwarded-For:
+      - 185.115.7.206
+      X-Forwarded-Port:
+      - '80'
+      X-Forwarded-Proto:
+      - http
+    body:
+      encoding: UTF-8
+      string: '[{"LocalObservationDateTime":"2022-10-06T21:57:00+04:00","EpochTime":1665079020,"WeatherText":"Mostly
+        cloudy","WeatherIcon":38,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":21.1,"Unit":"C","UnitType":17},"Imperial":{"Value":70.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us","Link":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us"},{"LocalObservationDateTime":"2022-10-06T20:58:00+04:00","EpochTime":1665075480,"WeatherText":"Partly
+        cloudy","WeatherIcon":35,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":21.1,"Unit":"C","UnitType":17},"Imperial":{"Value":70.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us","Link":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us"},{"LocalObservationDateTime":"2022-10-06T19:58:00+04:00","EpochTime":1665071880,"WeatherText":"Clear","WeatherIcon":33,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":22.2,"Unit":"C","UnitType":17},"Imperial":{"Value":72.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us","Link":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us"},{"LocalObservationDateTime":"2022-10-06T18:59:00+04:00","EpochTime":1665068340,"WeatherText":"Clear","WeatherIcon":33,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":22.8,"Unit":"C","UnitType":17},"Imperial":{"Value":73.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us","Link":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us"},{"LocalObservationDateTime":"2022-10-06T17:58:00+04:00","EpochTime":1665064680,"WeatherText":"Partly
+        sunny","WeatherIcon":3,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":23.9,"Unit":"C","UnitType":17},"Imperial":{"Value":75.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us","Link":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us"},{"LocalObservationDateTime":"2022-10-06T16:58:00+04:00","EpochTime":1665061080,"WeatherText":"Mostly
+        cloudy","WeatherIcon":6,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":23.9,"Unit":"C","UnitType":17},"Imperial":{"Value":75.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us","Link":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us"},{"LocalObservationDateTime":"2022-10-06T15:59:00+04:00","EpochTime":1665057540,"WeatherText":"Partly
+        sunny","WeatherIcon":3,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":23.9,"Unit":"C","UnitType":17},"Imperial":{"Value":75.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us","Link":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us"},{"LocalObservationDateTime":"2022-10-06T14:58:00+04:00","EpochTime":1665053880,"WeatherText":"Mostly
+        cloudy","WeatherIcon":6,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":22.8,"Unit":"C","UnitType":17},"Imperial":{"Value":73.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us","Link":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us"},{"LocalObservationDateTime":"2022-10-06T13:59:00+04:00","EpochTime":1665050340,"WeatherText":"Partly
+        sunny","WeatherIcon":3,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":22.8,"Unit":"C","UnitType":17},"Imperial":{"Value":73.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us","Link":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us"},{"LocalObservationDateTime":"2022-10-06T12:58:00+04:00","EpochTime":1665046680,"WeatherText":"Mostly
+        cloudy","WeatherIcon":6,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":22.2,"Unit":"C","UnitType":17},"Imperial":{"Value":72.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us","Link":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us"},{"LocalObservationDateTime":"2022-10-06T11:59:00+04:00","EpochTime":1665043140,"WeatherText":"Mostly
+        cloudy","WeatherIcon":6,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":20.0,"Unit":"C","UnitType":17},"Imperial":{"Value":68.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us","Link":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us"},{"LocalObservationDateTime":"2022-10-06T11:04:00+04:00","EpochTime":1665039840,"WeatherText":"Cloudy","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":20.0,"Unit":"C","UnitType":17},"Imperial":{"Value":68.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us","Link":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us"},{"LocalObservationDateTime":"2022-10-06T09:58:00+04:00","EpochTime":1665035880,"WeatherText":"Light
+        rain shower","WeatherIcon":13,"HasPrecipitation":true,"PrecipitationType":"Rain","IsDayTime":true,"Temperature":{"Metric":{"Value":20.0,"Unit":"C","UnitType":17},"Imperial":{"Value":68.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us","Link":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us"},{"LocalObservationDateTime":"2022-10-06T08:58:00+04:00","EpochTime":1665032280,"WeatherText":"Cloudy","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":20.0,"Unit":"C","UnitType":17},"Imperial":{"Value":68.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us","Link":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us"},{"LocalObservationDateTime":"2022-10-06T07:58:00+04:00","EpochTime":1665028680,"WeatherText":"Cloudy","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":20.0,"Unit":"C","UnitType":17},"Imperial":{"Value":68.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us","Link":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us"},{"LocalObservationDateTime":"2022-10-06T06:58:00+04:00","EpochTime":1665025080,"WeatherText":"Cloudy","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":20.0,"Unit":"C","UnitType":17},"Imperial":{"Value":68.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us","Link":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us"},{"LocalObservationDateTime":"2022-10-06T06:03:00+04:00","EpochTime":1665021780,"WeatherText":"Cloudy","WeatherIcon":7,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":20.0,"Unit":"C","UnitType":17},"Imperial":{"Value":68.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us","Link":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us"},{"LocalObservationDateTime":"2022-10-06T04:57:00+04:00","EpochTime":1665017820,"WeatherText":"Mostly
+        cloudy","WeatherIcon":38,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":20.0,"Unit":"C","UnitType":17},"Imperial":{"Value":68.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us","Link":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us"},{"LocalObservationDateTime":"2022-10-06T03:58:00+04:00","EpochTime":1665014280,"WeatherText":"Mostly
+        cloudy","WeatherIcon":38,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":20.0,"Unit":"C","UnitType":17},"Imperial":{"Value":68.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us","Link":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us"},{"LocalObservationDateTime":"2022-10-06T02:58:00+04:00","EpochTime":1665010680,"WeatherText":"Mostly
+        cloudy","WeatherIcon":38,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":21.1,"Unit":"C","UnitType":17},"Imperial":{"Value":70.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us","Link":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us"},{"LocalObservationDateTime":"2022-10-06T01:58:00+04:00","EpochTime":1665007080,"WeatherText":"Mostly
+        cloudy","WeatherIcon":38,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":21.1,"Unit":"C","UnitType":17},"Imperial":{"Value":70.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us","Link":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us"},{"LocalObservationDateTime":"2022-10-06T00:58:00+04:00","EpochTime":1665003480,"WeatherText":"Mostly
+        cloudy","WeatherIcon":38,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":21.1,"Unit":"C","UnitType":17},"Imperial":{"Value":70.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us","Link":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us"},{"LocalObservationDateTime":"2022-10-06T00:06:00+04:00","EpochTime":1665000360,"WeatherText":"Mostly
+        cloudy","WeatherIcon":38,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":21.1,"Unit":"C","UnitType":17},"Imperial":{"Value":70.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us","Link":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us"},{"LocalObservationDateTime":"2022-10-05T23:05:00+04:00","EpochTime":1664996700,"WeatherText":"Mostly
+        cloudy","WeatherIcon":38,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":false,"Temperature":{"Metric":{"Value":21.1,"Unit":"C","UnitType":17},"Imperial":{"Value":70.0,"Unit":"F","UnitType":18}},"MobileLink":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us","Link":"http://www.accuweather.com/en/ge/tbilisi/171705/current-weather/171705?lang=en-us"}]'
+  recorded_at: Thu, 06 Oct 2022 18:40:46 GMT
+recorded_with: VCR 6.1.0
