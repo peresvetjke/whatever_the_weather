@@ -52,10 +52,10 @@ class WeatherV1 < Grape::API
 
       error!('Bad request: timestamp should be positive integer', 400) unless params[:timestamp].to_i > 0
 
-      value = TemperatureRecord.by_timestamp(params[:timestamp].to_i)&.temperature_celsius
-      error!('Not found', 404) unless value
+      temperature = TemperatureRecord.by_timestamp(params[:timestamp].to_i)
+      error!('Not found', 404) unless temperature
 
-      value
+      temperature
     end
   end
 

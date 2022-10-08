@@ -122,7 +122,7 @@ describe "Weather API", type: :request do
       end
 
       it { expect(response).to have_http_status 200 }
-      it { expect(json).to eq 25 }
+      it { expect(json['value']).to eq 25 }
     end
   end
 
