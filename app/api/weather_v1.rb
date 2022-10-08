@@ -9,9 +9,7 @@ class WeatherV1 < Grape::API
   namespace 'weather' do
     desc 'Current temperature'
     get('current') do
-      error!('Not found', 404) unless temperature_record = TemperatureRecord.current
-
-      temperature_record
+      TemperatureRecord.current
     end
 
     desc 'Historical temperature for last 24 hours'

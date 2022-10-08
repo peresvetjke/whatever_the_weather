@@ -55,6 +55,7 @@ gem 'grape_on_rails_routes'
 gem 'grape-active_model_serializers'
 gem 'faraday'
 gem 'rufus-scheduler'
+gem 'connection_pool'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

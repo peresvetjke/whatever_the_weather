@@ -10,32 +10,26 @@ describe "Weather API", type: :request do
   end
 
   before do
-    existing_records
-    do_request("get", path, params: { }, headers: headers)
+    VCR.use_cassette('current') do
+      existing_records
+      do_request("get", path, params: { }, headers: headers)
+    end
   end
 
   describe 'GET /api/v1/weather/current' do
     let(:path) { '/api/v1/weather/current' }
 
-    context 'no records' do
-      it { expect(response).to have_http_status 404 }
+    let(:result) do
+      {
+        'date_time' => DateTime.parse("2022-10-06T22:00:00+04:00").iso8601,
+        'value' => 21.1,
+        'unit' => '°C'
+      }
     end
 
-    context 'with records' do
-      let(:existing_records) { last_24_records }
+    it { expect(response).to have_http_status 200 }
 
-      let(:result) do
-        {
-          'date_time' => 1.hour.ago.beginning_of_hour.iso8601,
-          'value' => 29,
-          'unit' => '°C'
-        }
-      end
-
-      it { expect(response).to have_http_status 200 }
-
-      it { expect(json).to eq result }
-    end
+    it { expect(json).to eq result }
   end
 
   describe 'GET /api/v1/weather/historical' do

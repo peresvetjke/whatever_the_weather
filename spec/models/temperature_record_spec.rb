@@ -14,9 +14,21 @@ RSpec.describe TemperatureRecord, type: :model do
   end
 
   describe '.current' do
-    subject { described_class.current }
+    subject do
+      VCR.use_cassette('current') do
+        described_class.current
+      end
+    end
 
-    it { expect(described_class.first.temperature_celsius).to eq 29 }
+    let(:service) { instance_double(AccuWeather::Fetcher::Current) }
+    # it { expect(described_class.first.temperature_celsius).to eq 29 }
+    it 'calls AccuWeather::Fetcher' do
+      expect(AccuWeather::Fetcher::Current).to receive(:new).and_return(service)
+      expect(service).to receive(:call)
+      subject
+    end
+
+    it { expect(subject.temperature_celsius).to eq 21.1 }
   end
 
   describe '.last_24_hours' do

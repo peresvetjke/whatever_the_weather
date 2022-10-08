@@ -7,12 +7,11 @@ describe AccuWeather::Fetcher::Current do
     end
   end
 
-  it 'returns array with single element' do
-    is_expected.to be_instance_of Array
-    expect(subject.size).to eq 1
+  it 'returns TemperatureRecord' do
+    is_expected.to be_instance_of TemperatureRecord
   end
 
   it 'returns weather' do
-    expect(subject.first).to include('LocalObservationDateTime', 'Temperature')
+    expect(subject.temperature_celsius).to eq 21.1
   end
 end

@@ -7,11 +7,15 @@ class TemperatureRecord < ApplicationRecord
 
   class << self
     def current
-      order(date_time: :desc).first
+      Rails.cache.fetch("current", expires_in: 10.minutes) do
+        AccuWeather::Fetcher::Current.new.call
+      end
     end
 
     def last_24_hours
-      order(date_time: :desc).limit(24)
+      Rails.cache.fetch("last_24_hours", expires_in: 10.minutes) do
+        order(date_time: :desc).limit(24)
+      end
     end
 
     def max_of_last_24_hours
