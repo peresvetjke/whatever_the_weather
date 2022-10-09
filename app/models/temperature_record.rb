@@ -5,6 +5,8 @@ class TemperatureRecord < ApplicationRecord
   validates :temperature_celsius, :date_time, presence: true
   validates :date_time, uniqueness: true
 
+  default_scope { order(date_time: :desc) }
+
   class << self
     def current
       Rails.cache.fetch("current", expires_in: 10.minutes) do

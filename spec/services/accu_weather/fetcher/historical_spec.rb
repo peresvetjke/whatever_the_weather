@@ -13,6 +13,6 @@ describe AccuWeather::Fetcher::Historical do
   end
 
   it 'returns weathers' do
-    expect(subject.sample).to include('LocalObservationDateTime', 'Temperature')
+    expect(subject.sample).to be_instance_of TemperatureRecord
   end
 end

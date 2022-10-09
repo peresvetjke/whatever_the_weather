@@ -29,6 +29,18 @@ module AccuWeather
           params: { apikey: API_KEY }
         ).get
       end
+
+      def temperature_from_raw_record(raw_record)
+        TemperatureRecord.new(temperature_celsius: temperature_celsius(raw_record), date_time: date_time(raw_record))
+      end
+
+      def temperature_celsius(raw_record)
+        raw_record.dig('Temperature', 'Metric', 'Value').to_f
+      end
+
+      def date_time(raw_record)
+        DateTime.parse(raw_record['LocalObservationDateTime'])
+      end
     end
   end
 end
