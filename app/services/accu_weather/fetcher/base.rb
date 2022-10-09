@@ -30,14 +30,20 @@ module AccuWeather
         ).get
       end
 
+      # @param raw_record [JSON]
+      # @return [String]
       def temperature_from_raw_record(raw_record)
         TemperatureRecord.new(temperature_celsius: temperature_celsius(raw_record), date_time: date_time(raw_record))
       end
 
+      # @param raw_record [JSON]
+      # @return [Float]
       def temperature_celsius(raw_record)
         raw_record.dig('Temperature', 'Metric', 'Value').to_f
       end
 
+      # @param raw_record [JSON]
+      # @return [DateTime]
       def date_time(raw_record)
         DateTime.parse(raw_record['LocalObservationDateTime'])
       end
